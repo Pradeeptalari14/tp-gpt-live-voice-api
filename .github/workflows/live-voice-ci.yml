@@ -1,0 +1,28 @@
+name: GPT-Live Voice CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-voice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install fastapi uvicorn websockets pydantic openai pytest flake8
+      - name: Syntax & Lint Check
+        run: |
+          python -m py_compile gpt_live_voice_agent.py
+          flake8 gpt_live_voice_agent.py --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 gpt_live_voice_agent.py --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+      - name: Validate Scripts
+        run: |
+          bash scripts/validate.sh --dry-run
