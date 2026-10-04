@@ -48,6 +48,20 @@ flowchart TD
 
 ---
 
+## 💻 Infrastructure & Software Technology Stack
+
+| Layer | Technology & Tools | Production Role |
+|---|---|---|
+| **Audio Transport & Networking** | WebRTC PeerConnection, Full-Duplex WebSockets | Low-latency duplex audio streaming and binary data channel tool synchronization |
+| **Audio Codec & Streaming** | Opus 24kHz @ 32kbps, Web Audio API | Lossless speech encoding, jitter buffer compensation, and echo cancellation |
+| **Foundation Voice Engine** | OpenAI GPT-Live-1 / GPT-4o Realtime Audio | Native cross-modal audio transformer with ~80ms time-to-first-audio-token (TTFT) |
+| **Gateway Application Runtime**| Python 3.11+, FastAPI (ASGI), AsyncIO | High-concurrency audio chunk ingestion and asynchronous tool invocation router |
+| **Turn Detection & Interruption**| Server-Side Acoustic VAD (200ms threshold) | Millisecond-level user interruption detection and instant server stream cancellation |
+| **Container & Orchestration** | Kubernetes 1.30+, Docker OCI, Envoy Proxy | Pod deployment with sticky session routing for stateful WebRTC peer sessions |
+| **Telemetry & Observability** | Prometheus, OpenTelemetry Audio Metrics | Real-time monitoring of packet loss, conversational turn jitter, and round-trip latency |
+
+---
+
 ## 🎯 Where to Use (Real-World Enterprise Production Scenarios)
 
 | Industry / Domain | Core Operational Driver | Production Implementation |
