@@ -1,3 +1,6 @@
+[![Ecosystem](https://img.shields.io/badge/Portfolio%20Ecosystem-341%20Studios-6366f1.svg)](https://pradeeptalari.me/projects/)
+[![Architecture DAG](https://img.shields.io/badge/Architecture-DAG%20%26%20Course-10b981.svg)](https://pradeeptalari.me/tools/repo-learning/)
+
 # OpenAI GPT-Live-1 Voice API & Native Speech-to-Speech Architecture
 
 [![CI Status](https://github.com/Pradeeptalari14/tp-gpt-live-voice-api/actions/workflows/live-voice-ci.yml/badge.svg)](https://github.com/Pradeeptalari14/tp-gpt-live-voice-api/actions)
@@ -177,3 +180,6 @@ tp-gpt-live-voice-api/
 ## 📜 License & Compliance
 
 Licensed under the [MIT License](LICENSE). Built for enterprise AI engineering and telephony teams scaling OpenAI DevDay 2026 voice architectures.
+
+---
+*Synchronized with [GPT Live Voice API Studio Studio](https://pradeeptalari.me/tools/gpt-live-voice-api/) & [Repository Learning DAG](https://pradeeptalari.me/tools/repo-learning/) — [Talari Pradeep Portfolio](https://pradeeptalari.me)*
